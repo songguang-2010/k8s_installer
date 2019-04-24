@@ -1,0 +1,44 @@
+#创建service为myapp
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp
+  namespace: default
+spec:
+  selector:
+    app: myapp
+    release: canary
+  ports:
+  - name: http
+    targetPort: 80
+    port: 80
+
+---
+#创建后端服务的deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-backend-pod
+  namespace: default
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: myapp
+      release: canary
+  template:
+    metadata:
+      labels:
+        app: myapp
+        release: canary
+    spec:
+      imagePullSecrets: 
+        #secret to login private docker registry
+        - name: registry-pull-secret
+      containers:
+      - name: myapp
+        # image: ikubernetes/myapp:v2
+        image: registry.cn-beijing.aliyuncs.com/kube-systems/app-test-ingress:v2
+        ports:
+        - name: http
+          containerPort: 80

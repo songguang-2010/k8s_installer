@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <env name="env" description="enviroment variables">
+    <mode description="dev,test or production">dev</mode>
+  </env>
+  <path name="path" description="path variables">
+    <configPath>config</configPath>
+    <tmpPath>tmp</tmpPath>
+    <cfsslBinPath>resource/cfssl</cfsslBinPath>
+    <weaveBinPath>resource/weavenet</weaveBinPath>
+    <etcdBinPath>resource/etcd</etcdBinPath>
+    <kbsBinPath>resource/kubernetes/server/bin</kbsBinPath>
+    <kbsPluginPath>resource/kubernetes/cluster/addons</kbsPluginPath>
+    <etcdConfigPath>config/etcd</etcdConfigPath>
+    <kbsConfigPath>config/kbs</kbsConfigPath>
+    <cniBinPath>resource/cni</cniBinPath>
+    <cniConfigPath>config/cni</cniConfigPath>
+    <weaveConfigPath>config/weave</weaveConfigPath>
+    <dockerConfigPath>config/docker</dockerConfigPath>
+    <dashboardConfigPath>config/dashboard</dashboardConfigPath>
+    <corednsConfigPath>config/coredns</corednsConfigPath>
+    <ingressConfigPath>config/ingress</ingressConfigPath>
+    <metricsConfigPath>config/metrics</metricsConfigPath>
+
+    <remoteLocalBinPath>/usr/local/bin</remoteLocalBinPath>
+    <remoteSysctlPath>/etc/sysctl.d</remoteSysctlPath>
+    <remoteBinPath>/opt/kubernetes/bin</remoteBinPath>
+    <remoteSslPath>/opt/kubernetes/ssl</remoteSslPath>
+    <remoteCfgPath>/opt/kubernetes/cfg</remoteCfgPath>
+    <remoteSystemdPath>/usr/lib/systemd/system</remoteSystemdPath>
+    <remoteEtcdDataPath>/var/lib/etcd/default.etcd</remoteEtcdDataPath>
+    <remoteDemoPath>/opt/kubernetes/demo</remoteDemoPath>
+    <remoteCniBinPath>/opt/cni/bin</remoteCniBinPath>
+    <remoteCniCfgPath>/etc/cni/net.d</remoteCniCfgPath>
+    <remotePluginPath>/opt/kubernetes/addons</remotePluginPath>
+  </path>
+  <ips name="ips" description="ip variables">
+    <serviceClusterIpRange>9.1.0.0/16</serviceClusterIpRange>
+    <podClusterIpRange>9.2.0.0/16</podClusterIpRange>
+    <dockerSubnetIpRange>9.2.0.1/16</dockerSubnetIpRange>
+    <serviceClusterGatewayIp>9.1.0.1</serviceClusterGatewayIp>
+    <serviceClusterDnsIp>9.1.0.2</serviceClusterDnsIp>
+  </ips>
+  <docker name="docker" description="docker variables">
+    <username><![CDATA[zhou.ge@juewei.cn]]></username>
+    <password><![CDATA[A#ULn#sLLID]]></password>
+    <domain><![CDATA[registry.cn-beijing.aliyuncs.com]]></domain>
+  </docker>
+</project>
+

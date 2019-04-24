@@ -1,0 +1,20 @@
+[Unit]
+Description=Etcd Server
+Documentation=https://github.com/coreos/etcd
+Conflicts=etcd.service
+Conflicts=etcd2.service
+After=network.target
+
+[Service]
+WorkingDirectory=/var/lib/etcd
+EnvironmentFile=-/opt/kubernetes/cfg/etcd-node3.conf
+Type=notify
+Restart=always
+RestartSec=5s
+LimitNOFILE=40000
+TimeoutStartSec=0
+# set GOMAXPROCS to number of processors
+ExecStart=/bin/bash -c "GOMAXPROCS=$(nproc) /opt/kubernetes/bin/etcd"
+
+[Install]
+WantedBy=multi-user.target

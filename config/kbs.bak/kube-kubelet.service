@@ -1,0 +1,16 @@
+[Unit]
+Description=Kubernetes Kubelet
+After=docker.service
+Requires=docker.service
+Documentation=https://github.com/kubernetes/kubernetes
+
+[Service]
+WorkingDirectory=/var/lib/kubelet
+EnvironmentFile=-/etc/kubernetes/kube.conf
+EnvironmentFile=-/etc/kubernetes/kube-kubelet.conf
+# User=kube
+ExecStart=/usr/bin/kubelet $KUBE_LOGTOSTDERR $KUBE_LOG_LEVEL $KUBELET_ADDRESS $KUBELET_PORT $KUBELET_HOSTNAME $KUBE_ALLOW_PRIV $KUBELET_ARGS
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

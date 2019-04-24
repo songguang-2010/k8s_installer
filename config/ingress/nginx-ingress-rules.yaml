@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: simple-fanout-example
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+    #此service的访问域名
+  - host: foo.bar.com   
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: myapp 
+          servicePort: 80

@@ -1,0 +1,17 @@
+[Unit]
+Description=Kubernetes API Server
+# After=etcd.service
+# Wants=etcd.service
+Documentation=https://github.com/kubernetes/kubernetes
+
+[Service]
+EnvironmentFile=-/etc/kubernetes/kube.conf
+EnvironmentFile=-/etc/kubernetes/kube-apiserver.conf
+# User=kube
+ExecStart=/usr/bin/kube-apiserver $KUBE_LOGTOSTDERR $KUBE_LOG_LEVEL $KUBE_ETCD_SERVERS $KUBE_API_ADDRESS $KUBE_API_PORT $KUBELET_PORT $KUBE_ALLOW_PRIV $KUBE_SERVICE_ADDRESS $KUBE_ADMISSION_CONTROL $KUBE_API_ARGS
+Restart=on-failure
+Type=notify
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

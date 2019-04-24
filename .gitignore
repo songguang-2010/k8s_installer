@@ -1,0 +1,10 @@
+##ignore this file##
+#.gitignore
+.project
+.settings
+.buildpath
+.settings/
+refer/*
+.kube/*
+resource/*
+tmp/*

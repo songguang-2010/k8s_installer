@@ -1,0 +1,14 @@
+#!/bin/sh
+
+ETCD_DATA_DIR="/var/lib/etcd/default.etcd/"
+KUBELET_WORKING_DIR="/var/lib/kubelet/"
+# master server address to connect for kubectl, must be loadbalancer ip or node ip
+# KUBECTL_SERVER="https://192.168.2.231:6443"
+KUBECTL_SERVER="https://172.18.100.26:6444"
+# ETCD_CLUSTER_SERVER="https://192.168.2.231:2379,https://192.168.2.232:2379,https://192.168.2.233:2379"
+ETCD_CLUSTER_SERVER="https://172.18.100.47:2379,https://172.18.100.48:2379,https://172.18.100.49:2379"
+# FLANNEL_IP_SECTION="172.17.0.0/16"
+FLANNEL_IP_SECTION="9.0.0.0/16"
+DOCKER_USERNAME="zhou.ge@juewei.cn"
+DOCKER_PASSWORD="A#ULn#sLLID"
+DOCKER_DOMAIN="registry.cn-beijing.aliyuncs.com"

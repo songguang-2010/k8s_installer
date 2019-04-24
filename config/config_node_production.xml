@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <node name="master1" description="kbs master1" tags="production"
+    hostname="172.16.10.169" address="172.16.10.169" username="root" gateway="47.105.72.190"
+    osFamily="unix" osName="centos">
+    <password><![CDATA[Jk&nkkUoolL2eq]]></password>
+  </node>
+  <node name="master2" description="kbs master2" tags="production"
+    hostname="172.16.10.170" address="172.16.10.170" username="root" gateway="47.105.72.190"
+    osFamily="unix" osName="centos">
+    <password><![CDATA[Jk&nkkUoolL2eq]]></password>
+  </node>
+  <node name="master3" description="kbs master3" tags="production"
+    hostname="172.16.10.171" address="172.16.10.171" username="root" gateway="47.105.72.190"
+    osFamily="unix" osName="centos">
+    <password><![CDATA[Jk&nkkUoolL2eq]]></password>
+  </node>
+  <node name="node1" description="kbs node1" tags="production"
+    hostname="172.16.10.172" address="172.16.10.172" username="root" gateway="47.105.72.190"
+    osFamily="unix" osName="centos">
+    <password><![CDATA[Jk&nkkUoolL2eq]]></password>
+  </node>
+  <node name="node2" description="kbs node2" tags="production"
+    hostname="172.16.10.173" address="172.16.10.173" username="root" gateway="47.105.72.190"
+    osFamily="unix" osName="centos">
+    <password><![CDATA[Jk&nkkUoolL2eq]]></password>
+  </node>
+  <node name="proxy" description="kbs proxy" tags="production" address="172.16.10.174" osFamily="unix" osName="centos">
+    <hostname>172.16.10.174</hostname>  
+    <port>6443</port>
+  </node>
+  <node name="admin" description="kbs admin" tags="production"
+    hostname="172.16.10.172" address="172.16.10.172" username="root" gateway="118.190.155.67"
+    osFamily="unix" osName="centos">
+    <password><![CDATA[Jk&nkkUoolL2eq]]></password>
+  </node>
+</project>
+
