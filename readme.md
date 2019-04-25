@@ -1,4 +1,4 @@
-该项目是安装kubernetes集群的完整脚本集合，该项目中采用了k8s+coredns+flannel+etcd的集成方案。
+该项目是安装kubernetes集群的完整脚本集合，该项目中采用了k8s+coredns+weave+etcd的集成方案。
 
 环境依赖：
 centos7.6
