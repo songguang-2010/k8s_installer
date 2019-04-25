@@ -9,5 +9,8 @@ rootPath=$(cd "$(dirname "$parentPath")"; pwd)
 
 . ${rootPath}/scripts/common/constant.sh
 
+fab -c ${fabFile} --pty installCniNodeNormal --nodename master1
+fab -c ${fabFile} --pty installCniNodeNormal --nodename master2
+fab -c ${fabFile} --pty installCniNodeNormal --nodename master3
 fab -c ${fabFile} --pty installCniNodeNormal --nodename node1
 fab -c ${fabFile} --pty installCniNodeNormal --nodename node2

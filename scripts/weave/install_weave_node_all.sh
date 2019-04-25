@@ -9,6 +9,9 @@ rootPath=$(cd "$(dirname "$parentPath")"; pwd)
 
 . ${rootPath}/scripts/common/constant.sh
 
+fab -c ${fabFile} installWeaveNodeNormal --nodename master1
+fab -c ${fabFile} installWeaveNodeNormal --nodename master2
+fab -c ${fabFile} installWeaveNodeNormal --nodename master3
 fab -c ${fabFile} installWeaveNodeNormal --nodename node1
 fab -c ${fabFile} installWeaveNodeNormal --nodename node2
 fab -c ${fabFile} installWeaveNodeAfter

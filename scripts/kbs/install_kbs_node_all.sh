@@ -14,6 +14,9 @@ rootPath=$(cd "$(dirname "$parentPath")"; pwd)
 #prepare for working node
 
 fab -c ${fabFile} installKbsNodeBefore
+fab -c ${fabFile} installKbsNodeNormal --nodename master1
+fab -c ${fabFile} installKbsNodeNormal --nodename master2
+fab -c ${fabFile} installKbsNodeNormal --nodename master3
 fab -c ${fabFile} installKbsNodeNormal --nodename node1
 fab -c ${fabFile} installKbsNodeNormal --nodename node2
 
